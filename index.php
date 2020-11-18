@@ -86,25 +86,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-    <style type="text/css">
-        body {
-            font: 14px sans-serif;
-        }
-
-        .container {
-            max-width: 30%;
-            padding: 20px;
-        }
-    </style>
-</head>
-
+// Include header
+include "header.php";
+?>
 <body>
     <div class="container">
         <h2>Call Center CRM Login</h2>
@@ -126,6 +112,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         </form>
     </div>
-</body>
 
-</html>
+    <?php
+
+    // Include footer
+    include "footer.php";
+
+    ?>
