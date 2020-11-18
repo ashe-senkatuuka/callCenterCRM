@@ -6,4 +6,4 @@ The CRM comprises of the following:
 2. New Call page to capture fuel station usage information from the end user
 3. Reports page to which retrives all the calls logged and exports reports in exxcel format
 
-The application has been in PHP
+The application has been written in PHP
