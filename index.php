@@ -3,9 +3,14 @@
 session_start();
 
 // Check if the user is already logged in, if yes then redirect him to welcome page
-if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    header("location: welcome.php");
-    exit;
+if (!isset($_SESSION['id'])) {
+    $_SESSION['msg'] = "You must log in first";
+    header('location: index.php');
+}
+if (isset($_GET['logout'])) {
+    session_destroy();
+    unset($_SESSION['id']);
+    header("location:index.php");
 }
 
 // Include config file
