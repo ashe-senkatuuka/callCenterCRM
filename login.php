@@ -94,6 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Include header
 include "header.php";
 ?>
+
 <body>
     <div class="container">
         <h2>Call Center CRM Login</h2>
@@ -115,10 +116,12 @@ include "header.php";
 
         </form>
     </div>
+    <?php
+    // Include js scripts
+    include "scripts.php";
+    ?>
 
     <?php
-
     // Include footer
     include "footer.php";
-
     ?>

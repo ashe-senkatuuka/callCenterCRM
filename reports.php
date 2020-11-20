@@ -31,7 +31,6 @@ if (true) {
         if ($stmt->execute()) {
             // Retrieve and cache calls
             $reports = $stmt->fetchAll(PDO::FETCH_OBJ);
-            echo "success";
         }
     }
 }
@@ -46,7 +45,7 @@ include "navbar.php";
 ?>
 <div class="container">
     <h2>Customer Care Reports</h2>
-    <hr>
+
     <table class="table table-striped" id="reportsTable">
         <thead>
             <tr>
@@ -83,7 +82,23 @@ include "scripts.php";
 
 <script>
     $(document).ready(function() {
-        $('#reportsTable').DataTable();
+        let printDate = (new Date().toDateString());
+        var table = $('#reportsTable').DataTable({
+            // scrollY: 400,
+            paging: true,
+            dom: 'lBfrtip',
+            buttons: [
+
+                {
+                    extend: 'excelHtml5',
+                    text: 'Export to Excel',
+                    title: 'CRM Report -- ' +printDate
+
+                }
+            ]
+
+
+        });
     });
 </script>
 
