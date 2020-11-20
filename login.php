@@ -3,10 +3,6 @@
 session_start();
 
 // Check if the user is already logged in, if yes then redirect him to welcome page
-if (!isset($_SESSION['id'])) {
-    $_SESSION['msg'] = "You must log in first";
-    header('location: login.php');
-}
 if (isset($_GET['logout'])) {
     session_destroy();
     unset($_SESSION['id']);
@@ -90,6 +86,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     unset($pdo);
 }
 ?>
+
+
 
 <?php
 
