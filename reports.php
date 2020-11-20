@@ -53,6 +53,7 @@ include "navbar.php";
                 <th scope="col">Preferred Station</th>
                 <th scope="col">Reason</th>
                 <th scope="col">Product</th>
+                <th scope="col">Date</th>
             </tr>
         </thead>
         <tbody>
@@ -65,6 +66,7 @@ include "navbar.php";
                     <th><?= $ticket->preferred_station ?></th>
                     <th><?= $ticket->preferred_station_reason ?></th>
                     <th><?= $ticket->preferred_station_product  ?></th>
+                    <th><?= $ticket->created_at  ?></th>
 
                 </tr>
             <?php

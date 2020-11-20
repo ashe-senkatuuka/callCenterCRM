@@ -14,7 +14,7 @@
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="button">Logout</button>
+        <a href="index.php?logout='1'" class="btn btn-outline-success ml-2">Logout</a>
         </form>
     </div>
 </nav>

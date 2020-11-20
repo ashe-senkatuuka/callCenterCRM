@@ -47,7 +47,6 @@ if (isset($_POST['callDetails'])) {
 
         // Attempt to execute the prepared statement
         if ($stmt->execute()) {
-            echo "success";
         }
     }
 }
