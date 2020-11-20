@@ -47,7 +47,6 @@ if (isset($_POST['callDetails'])) {
 
         // Attempt to execute the prepared statement
         if ($stmt->execute()) {
-            echo "success";
         }
     }
 }
@@ -119,7 +118,10 @@ include "navbar.php";
     </form>
 </div>
 
-
+<?php
+// Include js scripts
+include "scripts.php";
+?>
 
 <?php
 // Include footer
